@@ -1,12 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <h1>welcome  to mickeys webpage</h1>
-</body>
-</html>
+{%extends 'base.html' %}
+
+{% block styles%}
+{{ super() }}
+<link rel="stylesheet" href="../static/index.css">
+{% endblock %}
+
+
+{%block content %}
+    <div class="container-fluid">
+        <h1> welcome to mickey`s blog webpage </h1><br><br><br>
+
+        <P>welcome to this site i hope you have as much fun as want and don`t forget to subscribe to my Blog page </P>
+    </div>
+
+{% endblock %}
