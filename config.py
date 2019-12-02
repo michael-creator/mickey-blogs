@@ -1,14 +1,27 @@
-class Config:
-    SQLALCHEMY_DATABASE_URI ='postgresql+psycopg2://michael:joker@localhost/mickeypost'
-    SQLALCHEMY_TRACK_MODIFICATIONS = 'True'
+import os
 
-class ProConfig(Config):
-  pass
+class Config:
+
     
+  SQLALCHEMY_DATABASE_URI ='postgresql+psycopg2://michael:mickey22@localhost/mickeypost'
+  SECRET_KEY = os.environ.get('SECRET_KEY')
+  
+class TestConfig(Config):
+   SQLALCHEMY_DATABASE_URI ='postgresql+psycopg2://michael:mickey22@localhost/mickeypost'
+
+class ProdConfig(Config):
+  SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
+
+
 class DevConfig(Config):
-    DEBUG = True
     
-# config_options = {
-#     'production' : ProdConfig,
-#     'development': DevConfig
-# }
+
+   SQLALCHEMY_DATABASE_URI ='postgresql+psycopg2://michael:mickey22@localhost/mickeypost'
+
+DEBUG = True
+
+config_options = {
+'development':DevConfig,
+'production':ProdConfig,
+'test':TestConfig
+}
