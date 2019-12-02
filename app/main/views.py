@@ -24,3 +24,7 @@ def contact():
 def new_review():
  
     return render_template('new_review.html')
+
+@main.route('/blog')
+def blog():
+    return render_template('blog.html')
