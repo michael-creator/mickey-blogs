@@ -1,0 +1,1 @@
+export DATABASE_URI="postgresql+psycopg2://michael:joker@localhost/mickeypost"
