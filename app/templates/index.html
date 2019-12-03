@@ -7,18 +7,30 @@
 
 
 {%block content %}
-    <div class="container-fluid">
-        <h1> welcome to mickey`s blog webpage </h1><br><br><br>
+<div class="container-fluid">
+    <h1> welcome to mickey`s blog webpage </h1><br><br><br>
 
-        <P>welcome to this site i hope you have as much fun as want and don`t forget to subscribe to my Blog page </P>
+    <P>welcome to this site i hope you have as much fun as want and don`t forget to subscribe to my Blog page </P>
+</div>
+<div class="container">
+    <button class="btn primary">click here</button>
+</div>
+
+<img src="static/photo/arrow.gif" width="180" height="300">
+
+<div class="container">
+    <button class="btn primary">!!subscribe!!</button>
+</div>
+
+
+  <div class="card">
+    <div class="card-header">
+      RANDOM QUOTES
     </div>
-    <div class="container">
-        <button class="btn primary">click here</button>
+    <div class="card-body">
+      <h5 class="card-title">by:{{quotes.author}}</h5>
+      <p class="card-text">{{quotes.quote}}</p>
+      
     </div>
-
-    <img src="static/photo/arrow.gif" width="180" height="300">
-
-    <div class="container">
-            <button class="btn primary">!!subscribe!!</button>
-        </div>
+  </div>
 {% endblock %}
